@@ -144,7 +144,6 @@ WHERE q_rank <= 3
 ORDER BY segment, q_rank
 
 -- 5. What are the top 3 worst-selling products in every category? (Quantity-wise)
-
 SELECT *
 FROM(
 SELECT qt.id, qt.name, p.category, qt.total_quantity,
