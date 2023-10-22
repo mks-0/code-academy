@@ -40,11 +40,9 @@ FOREIGN KEY ("customer_id") REFERENCES "customer" ("id")
 
 CREATE TABLE IF NOT EXISTS shipment (
 "id" varchar(64) PRIMARY KEY,
-"order_id" varchar(32),
 "ship_mode" varchar(64),
 "address_id" integer,
 "ship_date" date,
-FOREIGN KEY ("order_id") REFERENCES "orders" ("id"),
 FOREIGN KEY ("address_id") REFERENCES "address" ("id")
 );
 
@@ -90,8 +88,7 @@ SELECT a.state,
 SUM(p.sell_price *(1 - oi.discount) * oi.quantity)::numeric(30,2) as sales
 FROM Product p
 JOIN OrderItems oi ON p.id = oi.product_id
-JOIN Orders o ON o.id = oi.order_id
-JOIN Shipment s ON s.order_id = o.id
+JOIN Shipment s ON oi.shipment_id = s.id
 JOIN Address a ON a.id = s.address_id
 GROUP BY a.state
 ORDER BY sales;
