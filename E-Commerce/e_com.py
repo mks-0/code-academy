@@ -188,7 +188,6 @@ def set_ax(ax, xyzc):
 def plot_3d(clustered_data, label: str, elev=30, azim=15):
     fig = plt.figure(figsize=(7, 7), facecolor="none")
     fig.set_facecolor("#222A3588")
-    # defining all 3 axis
     xyzc = get_xyz(clustered_data)
     # syntax for 3-D projection
     ax = plt.axes(projection="3d")
