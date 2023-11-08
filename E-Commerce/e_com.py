@@ -174,7 +174,7 @@ def get_xyz(data):
 
 def set_ax(ax, xyzc):
     color = "#303030"
-    # ax.set_facecolor("none")
+    ax.set_facecolor("none")
     ax.set_xlabel(xyzc[0].name)
     ax.set_ylabel(xyzc[1].name)
     ax.set_zlabel(xyzc[2].name, labelpad=2)
@@ -187,7 +187,7 @@ def set_ax(ax, xyzc):
 
 def plot_3d(clustered_data, label: str, elev=30, azim=15):
     fig = plt.figure(figsize=(7, 7), facecolor="none")
-    fig.set_facecolor("#222A3588")
+    fig.set_facecolor("none")
     xyzc = get_xyz(clustered_data)
     # syntax for 3-D projection
     ax = plt.axes(projection="3d")
