@@ -25,5 +25,5 @@ def get_data():
 
 print(get_data())
 
-line_chart(get_data(), x='Date', y='Close')
+line_chart(get_data(), x='date', y='close')
 
