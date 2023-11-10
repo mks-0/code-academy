@@ -20,9 +20,9 @@ def get_data():
     url = "https://docs.google.com/spreadsheets/d/11q16a6xO9Q6u22osRzyQqEIr4ha5bJwNaCktScBlj1A/edit#gid=0"
     data = conn.read(spreadsheet=url, usecols=[0, 1])
     
-    return st.dataframe(data)
+    return st.dataframe(data).dropna()
 
-print(get_data())
+# print(get_data())
 
-st.line_chart(get_data().dropna())
+st.line_chart(get_data())
 
