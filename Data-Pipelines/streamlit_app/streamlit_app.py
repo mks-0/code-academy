@@ -3,9 +3,11 @@ from streamlit import line_chart
 from streamlit.web.cli import main
 import pandas as pd
 import numpy as np
+import os
 
 def get_data():
-    gc = gspread.service_account(filename="./service_account.json")
+    auth = os.environ.get('service_account')
+    gc = gspread.service_account(auth)
     sh = gc.open('DataPipelines')
     worksheet = sh.worksheet('Sheet1')
     df = pd.DataFrame(columns=['Date', 'Close'])
