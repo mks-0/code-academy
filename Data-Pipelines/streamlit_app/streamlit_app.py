@@ -21,7 +21,7 @@ def get_data():
     
     return data
 
-print(data)
+print(get_data())
 
-st.line_chart(data, x='date', y='close')
+st.line_chart(get_data(), x='date', y='close')
 
