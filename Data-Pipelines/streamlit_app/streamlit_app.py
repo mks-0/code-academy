@@ -4,7 +4,6 @@ from streamlit.web.cli import main
 from streamlit_gsheets import GSheetsConnection
 import pandas as pd
 import numpy as np
-import os
 
 
 def get_data():
@@ -20,9 +19,9 @@ def get_data():
     url = "https://docs.google.com/spreadsheets/d/11q16a6xO9Q6u22osRzyQqEIr4ha5bJwNaCktScBlj1A/edit#gid=0"
     data = conn.read(spreadsheet=url, usecols=[0, 1])
     
-    return st.dataframe(data).dropna()
+    return st.dataframe(data)
 
-# print(get_data())
+print(get_data())
 
-st.line_chart(get_data())
+# st.line_chart(get_data())
 
