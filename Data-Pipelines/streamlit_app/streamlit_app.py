@@ -1,13 +1,15 @@
 import gspread 
 from streamlit import line_chart
 from streamlit.web.cli import main
+from streamlit_gsheets import GSheetsConnection
 import pandas as pd
 import numpy as np
 import os
 
+
 def get_data():
-    auth = os.environ.get('service_account')
-    gc = gspread.service_account(auth)
+    conn = st.connection("gsheets", type=GSheetsConnection)
+    gc = gspread.service_account(conn.read())
     sh = gc.open('DataPipelines')
     worksheet = sh.worksheet('Sheet1')
     df = pd.DataFrame(columns=['Date', 'Close'])
