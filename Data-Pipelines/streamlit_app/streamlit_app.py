@@ -1,4 +1,5 @@
-import gspread 
+import gspread
+import from streamlit as st 
 from streamlit import line_chart
 from streamlit.web.cli import main
 from streamlit_gsheets import GSheetsConnection
