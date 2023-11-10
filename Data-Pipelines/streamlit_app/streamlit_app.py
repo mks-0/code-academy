@@ -10,6 +10,7 @@ import os
 
 def get_data():
     conn = st.connection("gsheets", type=GSheetsConnection)
+    print(conn.read())
     gc = gspread.service_account(conn.read())
     sh = gc.open('DataPipelines')
     worksheet = sh.worksheet('Sheet1')
