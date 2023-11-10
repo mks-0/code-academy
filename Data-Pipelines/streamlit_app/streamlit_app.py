@@ -1,6 +1,5 @@
 import gspread
 import streamlit as st 
-from streamlit import line_chart
 from streamlit.web.cli import main
 from streamlit_gsheets import GSheetsConnection
 import pandas as pd
@@ -25,5 +24,5 @@ def get_data():
 
 print(get_data())
 
-line_chart(get_data(), x='date', y='close')
+st.line_chart(get_data().dropna())
 
