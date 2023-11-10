@@ -2,4 +2,4 @@ gspread
 numpy
 pandas
 streamlit
-streamlit_gsheets
+git+https://github.com/streamlit/gsheets-connection
