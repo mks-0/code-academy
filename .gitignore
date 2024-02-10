@@ -4,8 +4,8 @@
 /BlueBerry-Winery/.ipynb_checkpoints
 /BlueBerry-Winery/vihno_verde_eda_presentation_text.docx
 /BlueBerry-Winery/BlueBerry Winery ML.pptx
-/BlueBerry-Winerywine-ml-old.ipynb
-/BlueBerry-Winerywine-eda-old.ipynb
+/BlueBerry-Winery/wine-ml-old.ipynb
+/BlueBerry-Winery/wine-eda-old.ipynb
 /Capital-Bike-Share/data/
 /Capital-Bike-Share/.ipynb_checkpoints/
 /Capital-Bike-Share/Capital Bikeshare EDA & ML.pptx
@@ -24,6 +24,7 @@
 /E-Commerce/E-Commerce Presentation.pptx
 /E-Commerce/records
 /E-Commerce/us-states-coordinates.json
+/Data-Pipelines
 /Data-Pipelines/api_request_package
 /Data-Pipelines/google_upload
 /Data-Pipelines/heroku
